@@ -20,5 +20,30 @@ public class database extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
+   sqLiteDatabase.execSQL("drop table if exists user");
+        onCreate(sqLiteDatabase);
     }
+
+    public boolean insert_data(String name, String car_model, String date, String number) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues c = new ContentValues();
+        c.put("name", name);
+        c.put("car_model", car_model);
+        c.put("date", date);
+        c.put("number", number);
+
+        long r = db.insert("users", null, c);
+        if (r == -1) return false;
+        else
+            return true;
+
+    }
+
+    public Cursor getinfo() {
+
+    SQLiteDatabase db = this.getReadableDatabase();
+    Cursor cursor = db.rawQuery("select * from users", null);
+       return cursor;
+
+}
 }
