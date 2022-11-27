@@ -5,34 +5,23 @@
     android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
+    android:background="@color/teal_700"
     tools:context=".MainActivity">
 
-
-    <TextView
-        android:id="@+id/text_title"
-        android:layout_width="392dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="28dp"
-        android:text="Please enter the details :"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/et1"
         android:layout_width="376dp"
         android:layout_height="61dp"
-        android:layout_marginTop="24dp"
         android:text="Name :"
         android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/text_title"
-        app:layout_constraintHorizontal_bias="0.687"
-        app:layout_constraintStart_toStartOf="@+id/text_title"
-        app:layout_constraintTop_toBottomOf="@+id/text_title" />
+        android:background="@drawable/rounded_edit_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071" />
 
     <EditText
 
@@ -40,8 +29,9 @@
         android:layout_width="372dp"
         android:layout_height="56dp"
         android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_edit_text"
         android:text="Car Model :"
-        android:textSize="25dp"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="@+id/et1"
         app:layout_constraintStart_toStartOf="@+id/et1"
         app:layout_constraintTop_toBottomOf="@+id/et1" />
@@ -51,6 +41,7 @@
         android:layout_width="371dp"
         android:layout_height="58dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_edit_text"
         android:text="Date :"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="@+id/et2"
@@ -63,8 +54,9 @@
         android:layout_width="372dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_edit_text"
         android:text="Number :"
-        android:textSize="25dp"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="@+id/et3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/et3"
@@ -75,6 +67,7 @@
         android:layout_width="303dp"
         android:layout_height="67dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/round_button"
         android:text="Insert New Data"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/et4"
@@ -87,6 +80,7 @@
         android:layout_width="301dp"
         android:layout_height="62dp"
         android:layout_marginTop="12dp"
+        android:background="@drawable/round_button"
         android:text="View Data"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/bt1"
@@ -98,7 +92,8 @@
         android:id="@+id/bt3"
         android:layout_width="303dp"
         android:layout_height="59dp"
-        android:text="Delete Existing Data"
+        android:background="@drawable/round_button"
+        android:text="Delete"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/bt2"
