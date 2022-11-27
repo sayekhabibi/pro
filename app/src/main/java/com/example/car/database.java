@@ -48,4 +48,16 @@ public class database extends SQLiteOpenHelper {
        return cursor;
 
 }
+    public boolean delete_data(String number) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from users where number=?", new String[]{number});
+        if (cursor.getCount() > 0) {
+            long r = db.delete("users", "number=?", new String[]{number});
+            if (r == -1) return
+                    false;
+            else
+                return true;
+        } else
+            return false;
+    }
 }

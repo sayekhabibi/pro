@@ -67,6 +67,20 @@ public class MainActivity2 extends AppCompatActivity {
 
 
         });
+        bt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String number=et4.getText().toString();
+                Boolean i = g.delete_data(number);
+                if (i == true) {
+                    Toast.makeText(MainActivity2.this, "Successful", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity2.this, "UnSuccessful", Toast.LENGTH_SHORT).show();
+                }
+
+
+            }
+        });
 
     }
 }
